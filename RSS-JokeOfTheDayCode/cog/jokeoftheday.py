@@ -41,7 +41,7 @@ class JokeOfTheDay(commands.Cog):
                     result = await cursor.fetchone()
                     await db.commit()
                     embed = nextcord.Embed(
-                        title="Zitat des Tages", description=f"{desc}")
+                        title="Witz des Tages", description=f"{desc}")
 
                     if not result:
                         query2 = """INSERT INTO jokeoftheday(lastMessage) VALUES(?)"""
